@@ -27,41 +27,26 @@ const Body = () => {
   const onSubmit = async (data) => {
     try {
       // Check if the user already exists
+      console.log(data.email);
       const checkUserResponse = await axios.get(
-        `https://localhost:7020/api/Bezoeker/GetBezoek/${data.email}` //http://127.0.0.1:5000/bezoeker/email/test@test.com werkt al!!
+        `http://127.0.0.1:5000/bezoeker/email/${data.email}`
       );
-      if (checkUserResponse.data) {
-        // als hij al bestaat voegen we de bestaande bezoekeer toe aan de bezoek tabel
+      console.log('dit?', checkUserResponse.status);
+
+      if (checkUserResponse.status === 200) {
+        // User already exists
         console.log('User already exists:', checkUserResponse.data);
 
-        const bezoekerId = checkUserResponse.data.id;
-
-        const bezoek = {
-          id: 0,
-          bedrijfId: data.bedrijfId,
-          bezoekerId: bezoekerId,
-          bezochtteWerknemer: data.bezochtewerknemer,
-          startTijd: new Date().toISOString(),
-          eindTijd: null,
-          status: 1,
-        };
-
-        const bezoekResponse = await axios.post(
-          'https://localhost:7020/api/Bezoek',
-          JSON.stringify(bezoek),
-          {
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          }
-        );
-        console.log('Bezoek successfully created:', bezoekResponse.data);
+        // Rest of your code...
 
         navigate('/vertrek');
       } else {
-        // Bestaat hij niet, dan maken we een nieuwe bezoeker aan
+        // User doesn't exist, create a new one
+        console.log(
+          'User does not exist, creating a new one with this data:' + data
+        );
         const response = await axios.post(
-          'https://localhost:7020/api/Bezoeker',
+          'http://127.0.0.1:5000/bezoeker',
           JSON.stringify(data),
           {
             headers: {
@@ -69,37 +54,23 @@ const Body = () => {
             },
           }
         );
+
         console.log('Bezoeker successfully created:', response.data);
-        const bezoekerId = response.data.id;
 
-        const bezoek = {
-          id: 0,
-          bedrijfId: data.bedrijfId,
-          bezoekerId: bezoekerId,
-          bezochtteWerknemer: data.bezochtewerknemer,
-          startTijd: new Date().toISOString(),
-          eindTijd: null,
-          status: 1,
-        };
-
-        const bezoekResponse = await axios.post(
-          'https://localhost:7020/api/Bezoek',
-          JSON.stringify(bezoek),
-          {
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          }
-        );
-        console.log('Bezoek successfully created:', bezoekResponse.data);
+        // Rest of your code...
 
         navigate('/vertrek');
       }
     } catch (error) {
       console.error('Error creating Bezoeker:', error);
-      console.log('Response data:', error.response.data);
-      const { errors } = error.response.data;
-      console.log('Validation errors:', errors);
+
+      if (error.response && error.response.data) {
+        console.log('Response data:', error.response.data);
+        const { errors } = error.response.data;
+        console.log('Validation errors:', errors);
+      } else {
+        console.log('Error response is undefined');
+      }
     }
   };
 

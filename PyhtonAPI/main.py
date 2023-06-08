@@ -1,9 +1,14 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+from flask_cors import CORS
+
 
 # Hier initialiseren we de Flask applicatie
 app = Flask(__name__)
+# hier maken we een CORS object aan
+
+CORS(app)
 # Hier initialiseren we de database -- C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\API.App \\dit is de DB van ons oorspronkelijk project
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/matth/Documents/Engrafi/EngrafiNew/Apps/API.App/Allphi.db'
 db = SQLAlchemy(app)
@@ -73,7 +78,7 @@ def get_bezoek(bezoek_id):
 def get_bezoeker_by_email(email):
     bezoeker = Bezoekers.query.filter_by(email=email).first()
     if bezoeker is None:
-        return jsonify({'error': 'Bezoeker not found'}), 404
+        abort(404, 'Bezoeker not found')
     result = {
         'id': bezoeker.id,
         'voornaam': bezoeker.voornaam,
