@@ -1,0 +1,60 @@
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.csproj.AssemblyReference.cache
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.AssemblyInfoInputs.cache
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.AssemblyInfo.cs
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.csproj.CoreCompileInputs.cache
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\appsettings.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\build\manifest.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\package-lock.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\package.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\public\manifest.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\Bezoeker.React.App.exe
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\Bezoeker.React.App.deps.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\Bezoeker.React.App.runtimeconfig.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\Bezoeker.React.App.dll
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\Bezoeker.React.App.pdb
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets\msbuild.Bezoeker.React.App.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets\msbuild.build.Bezoeker.React.App.props
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Bezoeker.React.App.props
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Bezoeker.React.App.props
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\scopedcss\bundle\Bezoeker.React.App.styles.css
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.dll
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\refint\Bezoeker.React.App.dll
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.pdb
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.genruntimeconfig.cache
+C:\Users\matth\Desktop\Graduaat Programmeren\Semester 3\Web 4\Les 7\Engrafi2\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\ref\Bezoeker.React.App.dll
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\appsettings.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\build\manifest.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\package-lock.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\package.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\public\manifest.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\Bezoeker.React.App.exe
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\Bezoeker.React.App.deps.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\Bezoeker.React.App.runtimeconfig.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\Bezoeker.React.App.dll
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\bin\Debug\net7.0\Bezoeker.React.App.pdb
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.csproj.AssemblyReference.cache
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.AssemblyInfoInputs.cache
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.AssemblyInfo.cs
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.csproj.CoreCompileInputs.cache
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets\msbuild.Bezoeker.React.App.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets\msbuild.build.Bezoeker.React.App.props
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Bezoeker.React.App.props
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Bezoeker.React.App.props
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\scopedcss\bundle\Bezoeker.React.App.styles.css
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.dll
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\refint\Bezoeker.React.App.dll
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.pdb
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\Bezoeker.React.App.genruntimeconfig.cache
+C:\Users\matth\Documents\Engrafi\EngrafiNew\Apps\Bezoeker.React.App\obj\Debug\net7.0\ref\Bezoeker.React.App.dll

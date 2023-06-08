@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Bezoeker.React.App.props" />
+</Project>

@@ -1,0 +1,3 @@
+ myenv\Scripts\activate
+ 
+ Dit moet gerund als ik werk aan dit project
