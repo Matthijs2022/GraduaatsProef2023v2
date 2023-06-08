@@ -28,7 +28,7 @@ const Body = () => {
     try {
       // Check if the user already exists
       const checkUserResponse = await axios.get(
-        `https://localhost:7020/api/Bezoeker/GetBezoek/${data.email}`
+        `https://localhost:7020/api/Bezoeker/GetBezoek/${data.email}` //http://127.0.0.1:5000/bezoeker/email/test@test.com werkt al!!
       );
       if (checkUserResponse.data) {
         // als hij al bestaat voegen we de bestaande bezoekeer toe aan de bezoek tabel
@@ -57,10 +57,7 @@ const Body = () => {
         );
         console.log('Bezoek successfully created:', bezoekResponse.data);
 
-        
         navigate('/vertrek');
-        
-        
       } else {
         // Bestaat hij niet, dan maken we een nieuwe bezoeker aan
         const response = await axios.post(
@@ -108,9 +105,9 @@ const Body = () => {
 
   return (
     <>
-        <div className="flex h-screen justify-center items-end start-scherm-wrapper"></div>
+      <div className="flex h-screen justify-center items-end start-scherm-wrapper"></div>
       <div className="heading text-center mt-4">
-        <h1 className='display-3'>Welkom!</h1>
+        <h1 className="display-3">Welkom!</h1>
       </div>
       <form
         className="form-horizontal text-center border-4 container"
@@ -165,15 +162,14 @@ const Body = () => {
             <input
               type="text"
               id="Email"
-              {...register('email', { required: true, 
+              {...register('email', {
+                required: true,
                 pattern: {
-                      value:
-                        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                      message: "Invalid email address",
-                    },
-               }
-              
-              )}
+                  value:
+                    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  message: 'Invalid email address',
+                },
+              })}
               placeholder="Enter your email"
             />
             {errors.email && (
@@ -235,10 +231,10 @@ const Body = () => {
         </div>
       </form>
       <div className="controls text-center">
-          <Link to="/" className="btn btn-primary btn-lg mt-4">
-         Terug
+        <Link to="/" className="btn btn-primary btn-lg mt-4">
+          Terug
         </Link>
-        </div>
+      </div>
     </>
   );
 };

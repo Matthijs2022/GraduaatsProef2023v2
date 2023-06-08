@@ -28,6 +28,16 @@ class Bedrijven(db.Model):
     status = db.Column(db.Integer, nullable=False)
 
 
+class Bezoek(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    bedrijf_id = db.Column(db.Integer, nullable=False)
+    bezoeker_id = db.Column(db.Integer, nullable=False)
+    bezochtte_werknemer = db.Column(db.Text, nullable=False)
+    start_tijd = db.Column(db.DateTime, nullable=False)
+    eind_tijd = db.Column(db.DateTime)
+    status = db.Column(db.Integer, nullable=False)
+
+
 @app.route('/bezoeker', methods=['GET'])
 def get_bezoekers():
     bezoekers = Bezoekers.query.all()
@@ -48,6 +58,22 @@ def get_bezoek(bezoek_id):
     bezoeker = Bezoekers.query.get(bezoek_id)
     if bezoeker is None:
         return jsonify({'error': 'Bezoek not found'}), 404
+    result = {
+        'id': bezoeker.id,
+        'voornaam': bezoeker.voornaam,
+        'achternaam': bezoeker.achternaam,
+        'email': bezoeker.email
+    }
+    return jsonify(result)
+
+# Bezoeker ophalen met email:
+
+
+@app.route('/bezoeker/email/<string:email>', methods=['GET'])
+def get_bezoeker_by_email(email):
+    bezoeker = Bezoekers.query.filter_by(email=email).first()
+    if bezoeker is None:
+        return jsonify({'error': 'Bezoeker not found'}), 404
     result = {
         'id': bezoeker.id,
         'voornaam': bezoeker.voornaam,
