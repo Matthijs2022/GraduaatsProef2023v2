@@ -142,9 +142,14 @@ def create_bezoek():
     start_tijd_str = data['startTijd']
     eind_tijd_str = data['eindTijd']
 
-    startTijd = datetime.fromisoformat(start_tijd_str.replace('Z', '+00:00'))
-    eindTijd = None if eind_tijd_str == "null" else datetime.fromisoformat(
-        eind_tijd_str.replace('Z', '+00:00'))  # dit is omdat als een bezoek gestart wordt, de eindtijd null is
+    startTijd = None
+    if start_tijd_str:
+        startTijd = datetime.fromisoformat(
+            start_tijd_str.replace('Z', '+00:00'))
+
+    eindTijd = None
+    if eind_tijd_str:
+        eindTijd = datetime.fromisoformat(eind_tijd_str.replace('Z', '+00:00'))
 
     bezoek = Bezoek(
         bedrijfId=data['bedrijfId'],
