@@ -64,7 +64,7 @@ const Body = () => {
           status: 1,
         };
         const bezoekResponse = await axios.post(
-          'https://127.0.0.1:5000/bezoek',
+          'http://127.0.0.1:5000/bezoek',
           JSON.stringify(bezoek),
           {
             headers: {
@@ -94,7 +94,7 @@ const Body = () => {
         };
         console.log('Dit is de bezoek data:', bezoek);
         const bezoekResponse = await axios.post(
-          'https://127.0.0.1:5000/bezoek',
+          'http://127.0.0.1:5000/bezoek',
           JSON.stringify(bezoek),
           {
             headers: {

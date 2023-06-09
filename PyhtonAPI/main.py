@@ -141,10 +141,11 @@ def create_bezoek():
     data = request.get_json()
     start_tijd_str = data['startTijd']
     eind_tijd_str = data['eindTijd']
-    startTijd = datetime.fromisoformat(start_tijd_str.replace('Z', '+00:00'))
-    eindTijd = datetime.fromisoformat(eind_tijd_str.replace('Z', '+00:00'))
 
-    # data = request.get_json()
+    startTijd = datetime.fromisoformat(start_tijd_str.replace('Z', '+00:00'))
+    eindTijd = None if eind_tijd_str == "null" else datetime.fromisoformat(
+        eind_tijd_str.replace('Z', '+00:00'))  # dit is omdat als een bezoek gestart wordt, de eindtijd null is
+
     bezoek = Bezoek(
         bedrijfId=data['bedrijfId'],
         bezoekerId=data['bezoekerId'],
