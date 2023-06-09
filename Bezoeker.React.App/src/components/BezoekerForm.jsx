@@ -27,23 +27,18 @@ const Body = () => {
   const onSubmit = async (data) => {
     try {
       // Check if the user already exists
-      console.log(data.email);
       const checkUserResponse = await axios.get(
         `http://127.0.0.1:5000/bezoeker/email/${data.email}`
       );
-      console.log('dit?', checkUserResponse.status);
 
-      if (checkUserResponse.status === 200) {
-        // User already exists
-        console.log('User already exists:', checkUserResponse.data);
+      console.log('Response status:', checkUserResponse.status);
+      console.log('Response body:', checkUserResponse.data.exists);
 
-        // Rest of your code...
-
-        navigate('/vertrek');
-      } else {
+      if (checkUserResponse.data.exists === false) {
         // User doesn't exist, create a new one
         console.log(
-          'User does not exist, creating a new one with this data:' + data
+          'User does not exist, creating a new one with this data:',
+          data
         );
         const response = await axios.post(
           'http://127.0.0.1:5000/bezoeker',
@@ -57,9 +52,59 @@ const Body = () => {
 
         console.log('Bezoeker successfully created:', response.data);
 
+        const bezoekerId = checkUserResponse.data.id;
+
+        const bezoek = {
+          id: 0,
+          bedrijfId: data.bedrijfId,
+          bezoekerId: bezoekerId,
+          bezochtteWerknemer: data.bezochtewerknemer,
+          startTijd: new Date().toISOString(),
+          eindTijd: null,
+          status: 1,
+        };
+        const bezoekResponse = await axios.post(
+          'https://127.0.0.1:5000/bezoek',
+          JSON.stringify(bezoek),
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
+        console.log('Bezoek successfully created:', bezoekResponse.data);
+
         // Rest of your code...
 
-        navigate('/vertrek');
+        //navigate('/vertrek');
+      } else {
+        // Bezoeker staat al in de database
+        console.log('User already exists:', checkUserResponse.data);
+
+        const bezoekerId = checkUserResponse.data.id;
+
+        const bezoek = {
+          id: 0,
+          bedrijfId: data.bedrijfId,
+          bezoekerId: bezoekerId,
+          bezochtteWerknemer: data.bezochtewerknemer,
+          startTijd: new Date().toISOString(),
+          eindTijd: null,
+          status: 1,
+        };
+        console.log('Dit is de bezoek data:', bezoek);
+        const bezoekResponse = await axios.post(
+          'https://127.0.0.1:5000/bezoek',
+          JSON.stringify(bezoek),
+          {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }
+        );
+        console.log('Bezoek successfully created:', bezoekResponse.data);
+
+        //navigate('/vertrek');
       }
     } catch (error) {
       console.error('Error creating Bezoeker:', error);

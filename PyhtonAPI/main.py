@@ -46,11 +46,11 @@ class Bedrijven(db.Model):
 
 class Bezoek(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    bedrijf_id = db.Column(db.Integer, nullable=False)
-    bezoeker_id = db.Column(db.Integer, nullable=False)
-    bezochtte_werknemer = db.Column(db.Text, nullable=False)
-    start_tijd = db.Column(db.DateTime, nullable=False)
-    eind_tijd = db.Column(db.DateTime)
+    bedrijfId = db.Column(db.Integer, nullable=False)
+    bezoekerId = db.Column(db.Integer, nullable=False)
+    bezochtteWerknemer = db.Column(db.Text, nullable=False)
+    startTijd = db.Column(db.DateTime, nullable=False)
+    eindTijd = db.Column(db.DateTime)
     status = db.Column(db.Integer, nullable=False)
 
 
@@ -89,8 +89,9 @@ def get_bezoek(bezoek_id):
 def get_bezoeker_by_email(email):
     bezoeker = Bezoekers.query.filter_by(email=email).first()
     if bezoeker is None:
-        abort(404, 'Bezoeker not found')
+        return jsonify({'exists': False})
     result = {
+        'exists': True,
         'id': bezoeker.id,
         'voornaam': bezoeker.voornaam,
         'achternaam': bezoeker.achternaam,
@@ -99,10 +100,10 @@ def get_bezoeker_by_email(email):
     return jsonify(result)
 
 
-# Route to create a new Bezoek
+# Route to create a new Bezoeker
 
 @app.route('/bezoeker', methods=['POST'])
-def create_bezoek():
+def create_bezoeker():
     data = request.get_json()
     bezoeker = Bezoekers(
         voornaam=data['voornaam'],
@@ -131,6 +132,30 @@ def get_bedrijven():
             'status': bedrijf.status
         })
     return jsonify(result)
+
+# Route voor het creeren van een bezoek
+
+
+@app.route('/bezoek', methods=['POST'])
+def create_bezoek():
+    data = request.get_json()
+    start_tijd_str = data['startTijd']
+    eind_tijd_str = data['eindTijd']
+    startTijd = datetime.fromisoformat(start_tijd_str.replace('Z', '+00:00'))
+    eindTijd = datetime.fromisoformat(eind_tijd_str.replace('Z', '+00:00'))
+
+    # data = request.get_json()
+    bezoek = Bezoek(
+        bedrijfId=data['bedrijfId'],
+        bezoekerId=data['bezoekerId'],
+        bezochtteWerknemer=data['bezochtteWerknemer'],
+        startTijd=startTijd,
+        eindTijd=eindTijd,
+        status=data['status']
+    )
+    db.session.add(bezoek)
+    db.session.commit()
+    return jsonify({'message': 'Bezoek created successfully'})
 
 
 if __name__ == '__main__':
