@@ -25,25 +25,14 @@ const Eind = () => {
 
   const onSubmit = async (data) => {
     try {
-      // Check if the user already exists
-      const checkUserResponse = await axios.get(
-        `http://127.0.0.1:5000/bezoeker/email/${data.email}`
-      );
+      const endResponse = await axios.post(`http://127.0.0.1:5000/bezoek/end`, {
+        email: data.email,
+      });
+      console.log(data.email);
 
-      if (checkUserResponse.data) {
-        // User already exists, perform the necessary actions
-
-        const bezoekResponse = await axios.delete(
-          `http://127.0.0.1:5000/bezoek/${checkUserResponse.data.id}`,
-          {
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          }
-        );
-        console.log('Bezoek successfully deleted:', bezoekResponse.data);
-
-        setIsSubmitted(true); // Set isSubmitted to true on successful form submission
+      if (endResponse.data) {
+        console.log('Bezoek successfully deleted:', endResponse.data);
+        setIsSubmitted(true);
       }
     } catch (error) {
       console.error('Error retrieving Bezoeker:', error);
