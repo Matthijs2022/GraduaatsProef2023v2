@@ -52,7 +52,9 @@ const Body = () => {
 
         console.log('Bezoeker successfully created:', response.data);
 
-        const bezoekerId = checkUserResponse.data.id;
+        const bezoekerId = response.data.id;
+
+        console.log('bezoekerId:', bezoekerId);
 
         const bezoek = {
           id: 0,
@@ -74,9 +76,7 @@ const Body = () => {
         );
         console.log('Bezoek successfully created:', bezoekResponse.data);
 
-        // Rest of your code...
-
-        //navigate('/vertrek');
+        navigate('/vertrek');
       } else {
         // Bezoeker staat al in de database
         console.log('User already exists:', checkUserResponse.data);
@@ -104,7 +104,7 @@ const Body = () => {
         );
         console.log('Bezoek successfully created:', bezoekResponse.data);
 
-        //navigate('/vertrek');
+        navigate('/vertrek');
       }
     } catch (error) {
       console.error('Error creating Bezoeker:', error);

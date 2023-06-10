@@ -100,7 +100,7 @@ def get_bezoeker_by_email(email):
     return jsonify(result)
 
 
-# Route to create a new Bezoeker
+# Route om een bezoeker te creeren
 
 @app.route('/bezoeker', methods=['POST'])
 def create_bezoeker():
@@ -112,7 +112,10 @@ def create_bezoeker():
     )
     db.session.add(bezoeker)
     db.session.commit()
-    return jsonify({'message': 'Bezoeker created successfully'})
+
+    # We geven hier de id mee terug zodat we deze kunnen gebruiken bij het aanmaken van een bezoek
+    return jsonify({'message': 'Bezoeker created successfully', 'id': bezoeker.id})
+
 
 # Route om alle bedrijven op te halen
 
@@ -162,6 +165,21 @@ def create_bezoek():
     db.session.add(bezoek)
     db.session.commit()
     return jsonify({'message': 'Bezoek created successfully'})
+
+# route voor het deleten van een bezoek
+
+
+@app.route('/bezoek/<int:bezoek_id>', methods=['DELETE'])
+def delete_bezoek(bezoek_id):
+    bezoek = Bezoek.query.get(bezoek_id)
+
+    if not bezoek:
+        return jsonify({'message': 'Bezoek not found'})
+
+    db.session.delete(bezoek)
+    db.session.commit()
+
+    return jsonify({'message': 'Bezoek deleted successfully'})
 
 
 if __name__ == '__main__':

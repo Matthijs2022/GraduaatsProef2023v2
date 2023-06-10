@@ -25,15 +25,16 @@ const Eind = () => {
 
   const onSubmit = async (data) => {
     try {
+      // Check if the user already exists
       const checkUserResponse = await axios.get(
-        `https://localhost:7020/api/Bezoeker/GetBezoek/${data.email}`
+        `http://127.0.0.1:5000/bezoeker/email/${data.email}`
       );
 
       if (checkUserResponse.data) {
         // User already exists, perform the necessary actions
 
         const bezoekResponse = await axios.delete(
-          `https://localhost:7020/api/Bezoek/${checkUserResponse.data.id}`,
+          `http://127.0.0.1:5000/bezoek/${checkUserResponse.data.id}`,
           {
             headers: {
               'Content-Type': 'application/json',
